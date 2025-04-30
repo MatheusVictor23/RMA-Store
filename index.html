@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/1.0.8/reseter.min.css" integrity="sha512-w7sMEM5yzmuVP9ic9zpCLk/+whwrrhkH5g83x0wi5DEPo1y+/JniMmCVfbtjw5JipFpcCb4gyF2xLES6tc+TxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home/home.css">
+</head>
+<body>
+    <div id="body_content">
+
+        <header>
+            <nav id="nav_bar">
+                <h4 id="nav_bar_store_title">Store</h4>
+                <input type="search" id="nav_bar_search_input">
+                
+                <ul id="nav_bar_user_options">
+                    <li class="user_icon"><a href="#"><img src="./assets/icons/user.png" alt=""></li>
+                    <li class="user_icon"><a href="#"><img src="./assets/icons/heart.png" alt=""></li>
+                    <li class="user_icon"><a href="#"><img src="./assets/icons/shopping-cart.png" alt=""></a></li>
+                </ul>
+                
+            </nav>
+        </header>
+        
+        <main>
+            <section id="hero_section">
+                <img src="./assets/imgs/banner.jpeg" alt="" id="hero_section_img">
+                <div id="hero_section_description">
+                    <h3 id="hero_section_description_title">Seu estilo merece o melhor.</h3>
+                    <span id="hero_section_description_span">Descubra agora</span>
+                    <button id="hero_section_description_button">Conheça nossas promoções</button>
+                </div>
+            </section>
+
+            <section id="categories_section">
+
+                <h3>Nossas categorias</h3>
+                
+                <div id="categories">
+                    <div id="categories_prev">&laquo;</div>
+                    <div class="categories_images">
+                        <span class="category_text" id="category_title"></span>
+                        <img src="./assets/imgs/feminina.jpeg" alt="" id="category_img">
+                        <p class="category_text" id="category_description"></p>
+                    </div>
+                    <div id="categories_next">&raquo;</div>
+                </div>
+            </section>
+
+            <section id="fac_section">
+                <h3>Perguntas Frequentes</h3>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            Contato: contato@gmail.com
+        </footer>
+
+    </div>
+
+    <script src="./js/home/home.js"></script>
+</body>
+</html>
