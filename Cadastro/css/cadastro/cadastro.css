@@ -1,17 +1,22 @@
 #body_content{
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
+    width: 100vw;
+    height: 100vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    gap: 20px;
+}
+
+#page_title{
+    margin-top: 60px;
 }
 
 #cadastro_card{
-    width: 30%;
-    height: 60%;
+    width: 80%;
+    height: 40%;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -29,7 +34,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .cadastro_card_form_field{
@@ -59,4 +64,48 @@
     background-color: #000;
     border: 1px solid #000;
     border-radius: 8px;
+}
+
+
+
+
+@media(min-width:600px){
+    #cadastro_card{
+        width: 70%;
+        height: 50%;
+    }
+
+    #cadastro_card_form_submit{
+        width: 60%;
+        height: 40px;
+    }
+}
+
+
+
+
+
+@media(min-width: 1024px){
+    #cadastro_card{
+        width: 30%;
+        height: 60%;
+        padding: 30px;
+    }
+
+    #cadastro_card_form{
+        padding-top: 40px ;
+    }
+
+    #cadastro_card_form_sign{
+        margin-top: 20px;
+    }
+    
+    #cadastro_card_form_submit{
+        width: 50%;
+        height: 50px;
+        color: #fff;
+        background-color: #000;
+        border: 1px solid #000;
+        border-radius: 8px;
+    }
 }
