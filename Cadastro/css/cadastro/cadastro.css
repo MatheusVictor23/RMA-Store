@@ -86,18 +86,23 @@
 
 
 @media(min-width: 1024px){
+
+    #page_title{
+        margin-top: 20px;
+    }
+
     #cadastro_card{
         width: 30%;
-        height: 60%;
+        height: 75%;
         padding: 30px;
     }
 
     #cadastro_card_form{
-        padding-top: 40px ;
+        padding-top: 10px ;
     }
 
     #cadastro_card_form_sign{
-        margin-top: 20px;
+        margin-top: 15px;
     }
     
     #cadastro_card_form_submit{

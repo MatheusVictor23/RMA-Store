@@ -21,7 +21,11 @@
 
         <div id="cadastro_card">
             <h3>Cadastro</h3>
-            <form action="post" id="cadastro_card_form">
+            <form id="cadastro_card_form">
+                <div class="cadastro_card_form_field">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" class="form_input" placeholder="Digite seu nome">
+                </div>
                 <div class="cadastro_card_form_field">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" class="form_input" placeholder="Digite seu email">
@@ -31,12 +35,14 @@
                     <input type="text" name="password" id="password" class="form_input" placeholder="Digite sua senha">
                 </div>
 
-                <a href="#" id="cadastro_card_form_sign">Cadastre-se</a>
+                <a href="../Login/index.html" id="cadastro_card_form_sign">Login</a>
 
                 <input type="submit" value="Cadastrar" id="cadastro_card_form_submit">
             </form>
            
         </div>
     </div>
+
+    <script src="./js/cadastro.js"></script>
 </body>
 </html>
