@@ -8,8 +8,8 @@ const carousel = {
     categories : [
         {
             title:"Moda Masculina",
-            description: "Tudo para o seu vestuário",
-            url:"../assets/imgs/masculina.jpeg"        
+            description: "Roupas masculinas elegantes",
+            url:"./assets/imgs/masculina.jpeg"        
         },
         {
             title:"Moda Feminina",
@@ -18,7 +18,7 @@ const carousel = {
         },
         {
             title:"Moda Infantil",
-            description: "Tudo para o seu vestuário",
+            description: "De 0 a 8 anos",
             url:"./assets/imgs/infantil.jpeg"   
         }
     ],
@@ -56,3 +56,5 @@ prev.addEventListener('click', carousel.prev);
 
 const next = document.querySelector("#categories_next");
 next.addEventListener('click', carousel.next);
+
+carousel.imgs(page);
