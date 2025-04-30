@@ -1,0 +1,20 @@
+.rodape{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #bfbfbf;
+    color: #fdfdfd;
+    padding: 10px;
+    text-transform:lowercase
+  }
+
+#rodape_medias{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+}

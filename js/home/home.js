@@ -9,12 +9,12 @@ const carousel = {
         {
             title:"Moda Masculina",
             description: "Tudo para o seu vestuário",
-            url:"./assets/imgs/masculina.jpeg"        
+            url:"../assets/imgs/masculina.jpeg"        
         },
         {
             title:"Moda Feminina",
             description: "Tudo para o seu vestuário",
-            url:"./assets/imgs/feminina.jpeg"   
+            url:"./assets/imgs/feminina.jpg"   
         },
         {
             title:"Moda Infantil",

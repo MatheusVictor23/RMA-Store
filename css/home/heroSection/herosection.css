@@ -1,0 +1,45 @@
+#hero_section{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#hero_section_img{
+    width:100%;
+    height:  90%;
+}
+
+#hero_section_description{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 40%; 
+    transform: translateY(-50%);
+    text-align: center;
+    width: auto; 
+}
+
+#hero_section_description_title{
+    font-family: "Montserrat";
+    font-weight:700;
+}
+
+#hero_section_description_span{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: italic;
+}
+
+#hero_section_description_button{
+    width: 60%;
+    border: 1px solid #000;
+    border-radius: 0.938rem;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+}

@@ -1,3 +1,7 @@
+*{
+    font-family: "Inter";
+}
+
 body{
     width: 100vw;
     height: 100vh;

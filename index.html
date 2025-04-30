@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home/home.css">
 </head>
@@ -22,7 +23,7 @@
         <header>
             <nav id="nav_bar">
                 <h4 id="nav_bar_store_title">Store</h4>
-                <input type="search" id="nav_bar_search_input">
+                <input type="search" id="nav_bar_search_input" placeholder="Buscar...">
                 
                 <ul id="nav_bar_user_options">
                     <li class="user_icon"><a href="#"><img src="./assets/icons/user.png" alt=""></li>
@@ -50,9 +51,9 @@
                 <div id="categories">
                     <div id="categories_prev">&laquo;</div>
                     <div class="categories_images">
-                        <span class="category_text" id="category_title"></span>
-                        <img src="./assets/imgs/feminina.jpeg" alt="" id="category_img">
-                        <p class="category_text" id="category_description"></p>
+                        <h4 id="category_title">Moda Masculina</h4>
+                        <img src="./assets/imgs/masculina.jpeg" alt="" id="category_img">
+                        <p id="category_description">Tudo para o seu vestuário</p>
                     </div>
                     <div id="categories_next">&raquo;</div>
                 </div>
@@ -60,15 +61,58 @@
 
             <section id="fac_section">
                 <h3>Perguntas Frequentes</h3>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Frete
+                        </button>
+                      </h3>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Sed ut perspiciatis unde omnis</strong> iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Taxas
+                        </button>
+                      </h3>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Sed ut perspiciatis unde omnis</strong> iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Devolução
+                        </button>
+                      </h3>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Sed ut perspiciatis unde omnis</strong> iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.                        </div>
+                      </div>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer class="rodape">
-            Contato: contato@gmail.com
+            <ul id="rodape_medias">
+                <li><img src="./assets/icons/whatsapp.png" alt=""></li>
+                <li><img src="./assets/icons/instagram.png" alt=""></li>
+                <li><img src="./assets/icons/social-media.png" alt=""></li>
+            </ul>
+
+            <span>Contato: contato@gmail.com</span>
         </footer>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/home/home.js"></script>
 </body>
 </html>
