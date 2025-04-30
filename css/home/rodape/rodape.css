@@ -18,3 +18,10 @@
     gap: 10px;
     list-style: none;
 }
+
+@media(min-width:600px){
+  .rodape{
+    padding: 20px;
+    justify-content: space-between;
+  }
+}

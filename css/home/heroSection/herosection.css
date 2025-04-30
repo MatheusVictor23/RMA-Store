@@ -43,3 +43,24 @@
     background-color: #000;
     color: #fff;
 }
+
+@media(min-width:600px){
+    #hero_section_description{
+        gap: 10px;
+        top: 40%;
+        left: 50%; 
+        transform: translateY(-50%);
+        text-align: center;
+        width: auto; 
+    }
+}
+
+@media(min-width:1024px){
+    #hero_section{
+        height: 90vh;
+    }
+
+    #hero_section_img{
+        height:  100%;
+    }
+}

@@ -26,6 +26,10 @@
     font-size: 30px;
 }
 
+.categories_button:hover{
+    cursor: pointer;
+}
+
 .categories_images{
     height: 100%;
     width: 80%;
@@ -43,4 +47,15 @@
 
 .categories_images > p{
     font-size: 12px;
+}
+
+@media(min-width:1024px){
+    #categories_section{
+        height: 80vh;
+    }
+
+    #categories{
+        width: 40%;
+    }
+    
 }

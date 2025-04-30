@@ -41,3 +41,11 @@
 .user_icon:hover{
     cursor:pointer;
 }
+
+@media(min-width:1024px){
+    #nav_bar{
+        height: 10vh;
+    }
+}
+
+
