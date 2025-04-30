@@ -86,14 +86,19 @@
 
 
 @media(min-width: 1024px){
+
+    #page_title{
+        margin-top: 40px;
+    }
+
     #login_card{
         width: 30%;
-        height: 60%;
+        height: 70%;
         padding: 30px;
     }
 
     #login_card_form{
-        padding-top: 40px ;
+        padding-top: 30px ;
     }
 
     #login_card_form_sign{

@@ -1,7 +1,7 @@
-const button = document.querySelector("#cadastro_card_form_submit");
 
 
-button.addEventListener('click', (event) => {
+
+document.querySelector("#cadastro_card_form").addEventListener('submit', (event) => {
     event.preventDefault();
 
     let nome = document.querySelector("#name");
