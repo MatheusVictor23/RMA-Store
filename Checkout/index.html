@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="body_content">
+    <header>
+      <nav id="nav_bar">
+        <h1 id="nav_bar_store_title">Store</h1>
+        <ul id="nav_bar_user_options">
+          <li class="user_icon"><a href="#"><img src="./assets/icons/user.png" alt=""></a></li>
+          <li class="user_icon"><a href="#"><img src="./assets/icons/heart.png" alt=""></a></li>
+          <li class="user_icon"><a href="#"><img src="./assets/icons/shopping-cart.png" alt=""></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Finalizar Compra</h2>
+      <div class="container">
+        <div class="colunaItens">
+          <h3>Endereço de Entrega</h3>
+          <form class="formEndereco">
+            <input type="text" placeholder="Nome completo" required />
+            <input type="text" placeholder="Endereço" required />
+            <input type="text" placeholder="Cidade" required />
+            <input type="text" placeholder="Estado" required />
+            <input type="text" placeholder="CEP" required />
+            <input type="text" placeholder="Telefone" required />
+          </form>
+
+          <h3>Forma de Pagamento</h3>
+          <form class="formPagamento">
+            <select required>
+              <option value="">Selecione</option>
+              <option value="pix">PIX</option>
+              <option value="cartao">Cartão de Crédito</option>
+            </select>
+
+            <input type="text" placeholder="Número do cartão" />
+            <input type="text" placeholder="Nome no cartão" />
+            <input type="text" placeholder="Validade (MM/AA)" />
+            <input type="text" placeholder="CVV" />
+          </form>
+
+          <button class="finalizarBtn" onclick="location.href = '../Confirmacao/index.html'"> Confirmar Pedido </button>
+
+        </div>
+
+        <div class="resumoCarrinho">
+          <h3>Resumo do Pedido</h3>
+          <div class="resumoLinha">
+            <span>Subtotal</span>
+            <span>R$ 50,00</span>
+          </div>
+          <div class="resumoLinha">
+            <span>Entrega</span>
+            <span>R$ 10,00</span>
+          </div>
+          <div class="resumoLinha total">
+            <span>Total</span>
+            <span>R$ 60,00</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <ul id="rodape_medias">
+        <li><img src="./assets/icons/whatsapp.png" alt=""></li>
+        <li><img src="./assets/icons/instagram.png" alt=""></li>
+        <li><img src="./assets/icons/social-media.png" alt=""></li>
+      </ul>
+      <span>Contato: contato@gmail.com</span>
+    </footer>
+  </div>
+  <script src="script.JS"></script>
+</body>
+
+</html>
