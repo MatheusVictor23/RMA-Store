@@ -23,24 +23,25 @@
         <header>
             <nav id="nav_bar">
                 <h2 id="nav_bar_store_title"><a href="#">RMA Store</a></h4>
+                <label for="nav_bar_search_input" class="visually-hidden">Buscar produtos</label>
                 <input type="search" id="nav_bar_search_input" placeholder="Buscar...">
                 
                 <ul id="nav_bar_user_options">
                     <li>
                       <a href="../Perfil/index.html">
-                        <img class="user_icon" src="./assets/icons/user.png" alt="">
+                        <img class="user_icon" src="./assets/icons/user.png" alt="ícone perfil usuário">
                       </a>
                     </li>
                     
                     <li>
                       <a href="">
-                        <img class="user_icon" src="./assets/icons/heart.png" alt="">
+                        <img class="user_icon" src="./assets/icons/heart.png" alt="ícone peças favoritas do usuário">
                       </a>
                     </li>
 
                     <li>
                       <a href="../Carrinho/index.html">
-                        <img class="user_icon" src="./assets/icons/shopping-cart.png" alt="">
+                        <img class="user_icon" src="./assets/icons/shopping-cart.png" alt="ícone carrinho de compras do usuário">
                       </a>
                     </li>
                 </ul>
@@ -50,11 +51,11 @@
         
         <main>
             <section id="hero_section">
-                <img src="./assets/imgs/banner.jpeg" alt="" id="hero_section_img">
+                <img src="./assets/imgs/banner.jpeg" alt="banner modelo de roupa da empresa" id="hero_section_img">
                 <div id="hero_section_description">
                     <h3 id="hero_section_description_title">Seu estilo merece o melhor.</h3>
                     <span id="hero_section_description_span">Descubra agora</span>
-                    <button id="hero_section_description_button"><a href="#categories">Conheça nossas categorias</a></button>
+                    <button id="hero_section_description_button" aria-label="Ir para a sessão categorias"><a href="#categories">Conheça nossas categorias</a></button>
                 </div>
             </section>
 
@@ -73,13 +74,13 @@
                 </div>
             </section>
 
-            <section id="fac_section">
+            <section id="fac_section" aria-label="Sessão principais perguntas">
                 <h3>Perguntas Frequentes</h3>
 
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                       <h3 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" aria-label="Sobre o custo de frete">
                           Frete
                         </button>
                       </h3>
@@ -91,7 +92,7 @@
                     </div>
                     <div class="accordion-item">
                       <h3 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" aria-label="Taxas sobre produtos">
                           Taxas
                         </button>
                       </h3>
@@ -102,7 +103,7 @@
                     </div>
                     <div class="accordion-item">
                       <h3 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" aria-label="Sobre devolução"> 
                           Devolução
                         </button>
                       </h3>
@@ -115,11 +116,11 @@
             </section>
         </main>
 
-        <footer class="rodape">
+        <footer class="rodape" aria-label="Rodapé da página">
             <ul id="rodape_medias">
-                <li><img src="./assets/icons/whatsapp.png" alt=""></li>
-                <li><img src="./assets/icons/instagram.png" alt=""></li>
-                <li><img src="./assets/icons/social-media.png" alt=""></li>
+                <li><img src="./assets/icons/whatsapp.png" alt="Ícone whatsapp da empresa"></li>
+                <li><img src="./assets/icons/instagram.png" alt="Ícone instagram da empresa"></li>
+                <li><img src="./assets/icons/social-media.png" alt="Ícone rede social X da empresa"></li>
             </ul>
 
             <span>Contato: contato@gmail.com</span>
