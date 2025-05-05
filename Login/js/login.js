@@ -19,7 +19,7 @@ document.querySelector("#login_card_form").addEventListener("submit", async (eve
             alert("Login realizado com sucesso!");
 
             setTimeout(() => {
-                window.location.href = "../../Admin/index.html";
+                window.location.href = "../Admin/index.html";
             }, 1500);
         }
         
@@ -27,7 +27,7 @@ document.querySelector("#login_card_form").addEventListener("submit", async (eve
             alert("Login realizado com sucesso!");
 
             setTimeout(() => {
-                window.location.href = "../../Home/index.html";
+                window.location.href = "../Home/index.html";
             }, 1500);
         }
 

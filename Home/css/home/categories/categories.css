@@ -49,6 +49,10 @@
     font-size: 12px;
 }
 
+#category_description {
+    font-size: 1.25rem;
+}
+
 @media(min-width:1024px){
     #categories_section{
         height: 80vh;

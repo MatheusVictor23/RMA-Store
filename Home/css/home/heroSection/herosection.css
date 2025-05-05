@@ -2,18 +2,17 @@
     width: 100%;
     height: 80vh;
     position: relative;
+    padding: 30px;
 }
 
 #hero_section_img{
-    width:100%;
+    width:70%;
     height:  90%;
 }
 
 #hero_section_description{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    justify-content: center;
     align-items: center;
     text-align: center;
     position: absolute;
@@ -26,28 +25,43 @@
 
 #hero_section_description_title{
     font-family: "Montserrat";
-    font-weight:700;
+    font-weight:900;
+    font-size: 3rem;
 }
 
 #hero_section_description_span{
     font-family: "Montserrat";
     font-weight: 700;
     font-style: italic;
+    font-size: 2.25rem;
 }
 
 #hero_section_description_button{
-    width: 60%;
     border: 1px solid #000;
     border-radius: 0.938rem;
-    padding: 5px;
+    padding: 15px;
     background-color: #000;
     color: #fff;
+    font-size: larger;
+}
+
+#hero_section_description_button a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 1.25rem;
+}
+
+#hero_section_description_button:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
 }
 
 @media(min-width:600px){
     #hero_section_description{
         gap: 10px;
-        top: 40%;
+        top: 50%;
         left: 50%; 
         transform: translateY(-50%);
         text-align: center;
