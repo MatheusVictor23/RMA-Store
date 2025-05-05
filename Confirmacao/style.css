@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  
+  #body_content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+
+  #nav_bar {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #000;
+    color: #fff;
+    padding: 0 200px; 
+  }
+  
+  #nav_bar_store_title {
+    font-size: 1.5rem;
+  }
+  
+  #nav_bar_user_options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 3px; 
+  }
+  
+  .user_icon {
+    margin-right: 1.25rem;
+  }
+  
+  .user_icon:hover {
+    cursor: pointer;
+  }
+  
+
+  .confirmacao {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .confirmacao h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .mensagemConfirmacao {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+
+  .continuarComprandoBtn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continuarComprandoBtn:hover {
+    background-color: #333;
+  }
+  
+
+  .rodape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #bfbfbf;
+    color: #fdfdfd;
+    padding: 10px;
+    text-transform: lowercase;
+  }
+  
+  #rodape_medias {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+  }
+  
+
+  @media (max-width: 768px) {
+    #nav_bar {
+      padding: 0 20px;
+    }
+    
+    .confirmacao {
+      margin: 30px auto;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .rodape {
+      padding: 20px;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #nav_bar {
+      height: 10vh;
+    }
+  }
