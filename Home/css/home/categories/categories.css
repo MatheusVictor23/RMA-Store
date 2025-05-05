@@ -42,6 +42,7 @@
 }
 
 .categories_images > img{
+    cursor: pointer;
     max-height: 300px;
 }
 
