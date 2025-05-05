@@ -1,7 +1,5 @@
 // Função para recuperar o ID do usuário atual da sessão
 function getCurrentUserId() {
-    // Na prática, você usaria alguma forma de armazenamento de sessão
-    // Este é apenas um exemplo
     return localStorage.getItem('userId') || 2; // Default para teste
 }
 
@@ -19,97 +17,99 @@ async function loadUserData() {
         const userData = await response.json();
         
         // Preencher os dados na página
-        document.getElementById('user_name').textContent = userData.nome;
-        document.getElementById('user_email').textContent = userData.email;
-        
-        // Preencher o formulário
-        document.getElementById('edit_name').value = userData.nome;
-        document.getElementById('edit_email').value = userData.email;
+        document.getElementById('user_name').textContent = userData.nome || 'Usuário';
+        document.getElementById('user_email').textContent = userData.email || 'email@exemplo.com';
         
     } catch (error) {
         console.error('Erro:', error);
-        alert('Não foi possível carregar os dados do usuário. Tente novamente mais tarde.');
+        // Exibir dados de fallback em caso de erro
+        document.getElementById('user_name').textContent = 'Usuário';
+        document.getElementById('user_email').textContent = 'email@exemplo.com';
     }
 }
 
-// Função para atualizar os dados do usuário
-async function updateUserData(userData) {
+// Função para carregar pedidos recentes
+async function loadRecentOrders() {
     const userId = getCurrentUserId();
+    const noOrdersMessage = document.getElementById('no_orders_message');
+    const recentOrdersList = document.getElementById('recent_orders_list');
     
     try {
-        const response = await fetch(`http://localhost:3000/users/${userId}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
+        // Na prática, você faria uma requisição para obter os pedidos do usuário
+        // Simulando resposta para exemplo
+        const mockOrders = [
+            {
+                id: 1001,
+                date: '2025-03-15',
+                status: 'delivered',
+                total: 149.90
             },
-            body: JSON.stringify(userData)
-        });
+            {
+                id: 1002,
+                date: '2025-04-28',
+                status: 'processing',
+                total: 89.90
+            }
+        ];
         
-        if (!response.ok) {
-            throw new Error('Erro ao atualizar dados do usuário');
+        if (mockOrders.length > 0) {
+            noOrdersMessage.style.display = 'none';
+            
+            // Limpar o container
+            recentOrdersList.innerHTML = '';
+            
+            // Mostrar apenas os 3 mais recentes
+            const recentOrders = mockOrders.slice(0, 3);
+            
+            recentOrders.forEach(order => {
+                const orderDate = new Date(order.date).toLocaleDateString('pt-BR');
+                const orderTotal = order.total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                
+                let statusText = '';
+                let statusClass = '';
+                
+                switch(order.status) {
+                    case 'processing':
+                        statusText = 'Em andamento';
+                        statusClass = 'status_processing';
+                        break;
+                    case 'delivered':
+                        statusText = 'Entregue';
+                        statusClass = 'status_delivered';
+                        break;
+                    case 'canceled':
+                        statusText = 'Cancelado';
+                        statusClass = 'status_canceled';
+                        break;
+                    default:
+                        statusText = 'Processando';
+                        statusClass = 'status_processing';
+                }
+                
+                const orderElement = document.createElement('div');
+                orderElement.classList.add('order_item_small');
+                orderElement.innerHTML = `
+                    <div class="order_basic_info">
+                        <span class="order_number">Pedido #${order.id}</span>
+                        <span class="order_date">${orderDate}</span>
+                    </div>
+                    <span class="order_value">${orderTotal}</span>
+                    <span class="order_status_badge ${statusClass}">${statusText}</span>
+                `;
+                
+                recentOrdersList.appendChild(orderElement);
+            });
+        } else {
+            noOrdersMessage.style.display = 'block';
         }
-        
-        return await response.json();
     } catch (error) {
-        console.error('Erro:', error);
-        throw error;
+        console.error('Erro ao carregar pedidos:', error);
+        noOrdersMessage.style.display = 'block';
     }
 }
 
 // Inicialização quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     loadUserData();
-    
-    // Adicionar evento para o formulário
-    document.getElementById('perfil_form').addEventListener('submit', async (event) => {
-        event.preventDefault();
-        
-        const name = document.getElementById('edit_name').value.trim();
-        const email = document.getElementById('edit_email').value.trim();
-        const password = document.getElementById('edit_password').value.trim();
-        const confirmPassword = document.getElementById('confirm_password').value.trim();
-        
-        // Validações básicas
-        if (!name || name.length < 3) {
-            alert('Por favor, insira um nome válido com pelo menos 3 caracteres.');
-            return;
-        }
-        
-        if (!email || !email.includes('@')) {
-            alert('Por favor, insira um email válido.');
-            return;
-        }
-        
-        // Se o usuário quiser alterar a senha
-        if (password) {
-            if (password.length < 6) {
-                alert('A senha deve ter pelo menos 6 caracteres.');
-                return;
-            }
-            
-            if (password !== confirmPassword) {
-                alert('As senhas não coincidem.');
-                return;
-            }
-        }
-        
-        // Preparar dados para atualização
-        const userData = {
-            nome: name,
-            email: email
-        };
-        
-        // Adicionar senha apenas se for fornecida
-        if (password) {
-            userData.senha = password;
-        }
-        
-        try {
-            await updateUserData(userData);
-            alert('Perfil atualizado com sucesso!');
-            loadUserData(); // Recarregar dados
-        } catch (error) {
-            alert('Erro ao atualizar perfil. Tente novamente.');
-        }
-    });
+    loadRecentOrders();
 });

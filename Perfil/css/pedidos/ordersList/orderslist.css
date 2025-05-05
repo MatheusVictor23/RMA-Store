@@ -1,0 +1,269 @@
+#body_content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#pedidos_content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.breadcrumb {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+#page_title {
+    margin: 0;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#pedidos_filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.filter_option {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.filter_option:hover {
+    background-color: #e0e0e0;
+}
+
+.filter_option.active {
+    background-color: #000;
+    color: #fff;
+}
+
+#orders_section {
+    width: 95%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#order_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty_orders {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+.order_item {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.order_item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order_header {
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+@media (min-width: 600px) {
+    .order_header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.order_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order_id_date {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.order_id_date h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.order_date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.order_status {
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (min-width: 600px) {
+    .order_status {
+        margin-top: 0;
+    }
+}
+
+.status_processing {
+    background-color: #FFF4E5;
+    color: #FF9800;
+}
+
+.status_delivered {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+}
+
+.status_canceled {
+    background-color: #FFEBEE;
+    color: #F44336;
+}
+
+.order_total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.order_total span:first-child {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.total_value {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order_products {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order_item_product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order_item_product:last-child {
+    border-bottom: none;
+}
+
+.product_name {
+    font-weight: 500;
+    flex: 1;
+}
+
+.product_quantity {
+    font-size: 0.9rem;
+    color: #666;
+    margin-right: 15px;
+}
+
+.product_price {
+    font-weight: bold;
+}
+
+.order_actions {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+}
+
+.order_details_btn, .order_cancel_btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.order_details_btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.order_details_btn:hover {
+    background-color: #333;
+}
+
+.order_cancel_btn {
+    background-color: #f0f0f0;
+    color: #f44336;
+}
+
+.order_cancel_btn:hover {
+    background-color: #ffebee;
+}
+
+@media (min-width: 768px) {
+    #orders_section {
+        width: 85%;
+    }
+    
+    .order_actions {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    #orders_section {
+        width: 75%;
+    }
+}

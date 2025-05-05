@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - RMA Store</title>
+    <title>Meu Perfil - RMA Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/1.0.8/reseter.min.css" integrity="sha512-w7sMEM5yzmuVP9ic9zpCLk/+whwrrhkH5g83x0wi5DEPo1y+/JniMmCVfbtjw5JipFpcCb4gyF2xLES6tc+TxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,9 @@
     <div id="body_content">
         <header>
             <nav id="nav_bar">
-                <h2 id="nav_bar_store_title">RMA Store</h2>
+                <h2 id="nav_bar_store_title"><a href="../Home/index.html">RMA Store</a></h2>
                 <ul id="nav_bar_user_options">
+                    <li><a href="../Home/index.html"><img class="user_icon" src="../Home/assets/icons/home.png" alt="Home"></a></li>
                     <li><a href="#"><img class="user_icon" src="../Home/assets/icons/shopping-cart.png" alt="Carrinho"></a></li>
                     <li><a href="../Login/index.html"><img class="user_icon" src="../Admin/assets/icons/user-logout.png" alt="Sair"></a></li>
                 </ul>
@@ -28,12 +29,12 @@
         </header>
 
         <main id="perfil_content">
-            <h2 id="page_title">Meu Perfil</h2>
+            <h2 id="page_title">Minha Conta</h2>
 
             <div id="perfil_card">
                 <div id="perfil_info">
                     <div class="perfil_avatar">
-                        <img src="./assets/icons/user-avatar.png" alt="" id="user_avatar">
+                        <img src="./assets/icons/user-avatar.png" alt="Avatar do usuário" id="user_avatar">
                     </div>
                     
                     <div id="perfil_details">
@@ -42,35 +43,38 @@
                     </div>
                 </div>
 
-                <form id="perfil_form">
-                    <div class="perfil_form_field">
-                        <label for="edit_name">Nome</label>
-                        <input type="text" name="edit_name" id="edit_name" class="form_input" placeholder="Digite seu nome">
+                <div id="perfil_sections">
+                    <h3>Gerenciar Conta</h3>
+                    <div id="profile_menu">
+                        <a href="./dados/index.html" class="profile_menu_item">
+                            <img src="./assets/icons/edit-icon.png" alt="Ícone" class="item_icon">
+                            <div class="item_info">
+                                <h4>Meus Dados</h4>
+                                <p>Atualize suas informações pessoais</p>
+                            </div>
+                            <span class="item_arrow">›</span>
+                        </a>
+                        
+                        <a href="./pedidos/index.html" class="profile_menu_item">
+                            <img src="./assets/icons/order-icon.png" alt="Ícone" class="item_icon">
+                            <div class="item_info">
+                                <h4>Meus Pedidos</h4>
+                                <p>Acompanhe e gerencie seus pedidos</p>
+                            </div>
+                            <span class="item_arrow">›</span>
+                        </a>
                     </div>
-                    <div class="perfil_form_field">
-                        <label for="edit_email">Email</label>
-                        <input type="email" name="edit_email" id="edit_email" class="form_input" placeholder="Digite seu email">
-                    </div>
-                    <div class="perfil_form_field">
-                        <label for="edit_password">Nova Senha</label>
-                        <input type="password" name="edit_password" id="edit_password" class="form_input" placeholder="Digite sua nova senha">
-                    </div>
-                    <div class="perfil_form_field">
-                        <label for="confirm_password">Confirmar Senha</label>
-                        <input type="password" name="confirm_password" id="confirm_password" class="form_input" placeholder="Confirme sua nova senha">
-                    </div>
+                </div>
 
-                    <div id="button_container">
-                        <button type="submit" id="perfil_form_submit">Salvar Alterações</button>
+                <div id="recent_orders">
+                    <div class="section_header">
+                        <h3>Pedidos Recentes</h3>
+                        <a href="./pedidos/index.html" class="view_all">Ver todos</a>
                     </div>
-                </form>
-            </div>
-
-            <div id="orders_section">
-                <h3>Meus Pedidos</h3>
-                <div id="order_list">
-                    <p class="empty_orders">Você ainda não realizou nenhum pedido.</p>
-                    <!-- Os pedidos serão adicionados via JavaScript -->
+                    <div id="recent_orders_list">
+                        <p class="empty_orders" id="no_orders_message">Você ainda não realizou nenhum pedido.</p>
+                        <!-- Os pedidos recentes serão adicionados aqui via JavaScript -->
+                    </div>
                 </div>
             </div>
         </main>
