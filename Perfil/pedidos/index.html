@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos - RMA Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/1.0.8/reseter.min.css" integrity="sha512-w7sMEM5yzmuVP9ic9zpCLk/+whwrrhkH5g83x0wi5DEPo1y+/JniMmCVfbtjw5JipFpcCb4gyF2xLES6tc+TxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pedidos/pedidos.css">
+</head>
+<body>
+    <div id="body_content">
+        <header>
+            <nav id="nav_bar">
+                <h2 id="nav_bar_store_title"><a href="../../Home/index.html">RMA Store</a></h2>
+                <ul id="nav_bar_user_options">
+                    <li><a href="../../Home/index.html"><img class="user_icon" src="../../Home/assets/icons/home.png" alt="Home"></a></li>
+                    <li><a href="../index.html"><img class="user_icon" src="../../Admin/assets/icons/user.png" alt="Perfil"></a></li>
+                    <li><a href="#"><img class="user_icon" src="../../Home/assets/icons/shopping-cart.png" alt="Carrinho"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="pedidos_content">
+            <div class="breadcrumb">
+                <a href="../index.html">Minha Conta</a> > <span>Meus Pedidos</span>
+            </div>
+            
+            <h2 id="page_title">Meus Pedidos</h2>
+
+            <div id="pedidos_filter">
+                <div class="filter_option active" data-filter="all">Todos</div>
+                <div class="filter_option" data-filter="processing">Em andamento</div>
+                <div class="filter_option" data-filter="delivered">Entregues</div>
+                <div class="filter_option" data-filter="canceled">Cancelados</div>
+            </div>
+
+            <div id="orders_section">
+                <div id="order_list">
+                    <p class="empty_orders" id="no_orders_message">Você ainda não realizou nenhum pedido.</p>
+                    <!-- Os pedidos serão adicionados via JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <ul id="rodape_medias">
+                <li><img src="../../Home/assets/icons/whatsapp.png" alt="WhatsApp"></li>
+                <li><img src="../../Home/assets/icons/instagram.png" alt="Instagram"></li>
+                <li><img src="../../Home/assets/icons/social-media.png" alt="Social Media"></li>
+            </ul>
+
+            <span>Contato: contato@gmail.com</span>
+        </footer>
+    </div>
+
+    <script src="../js/pedidos.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Dados - RMA Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/1.0.8/reseter.min.css" integrity="sha512-w7sMEM5yzmuVP9ic9zpCLk/+whwrrhkH5g83x0wi5DEPo1y+/JniMmCVfbtjw5JipFpcCb4gyF2xLES6tc+TxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dados/dados.css">
+</head>
+<body>
+    <div id="body_content">
+        <header>
+            <nav id="nav_bar">
+                <h2 id="nav_bar_store_title"><a href="../../Home/index.html">RMA Store</a></h2>
+                <ul id="nav_bar_user_options">
+                    <li><a href="../../Home/index.html"><img class="user_icon" src="../../Home/assets/icons/home.png" alt="Home"></a></li>
+                    <li><a href="../index.html"><img class="user_icon" src="../../Admin/assets/icons/user.png" alt="Perfil"></a></li>
+                    <li><a href="#"><img class="user_icon" src="../../Home/assets/icons/shopping-cart.png" alt="Carrinho"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="dados_content">
+            <div class="breadcrumb">
+                <a href="../index.html">Minha Conta</a> > <span>Meus Dados</span>
+            </div>
+            
+            <h2 id="page_title">Meus Dados</h2>
+
+            <div id="dados_tabs">
+                <div class="tab active" data-tab="personal">Dados Pessoais</div>
+                <div class="tab" data-tab="address">Endereços</div>
+                <div class="tab" data-tab="security">Segurança</div>
+            </div>
+
+            <div id="dados_card">
+                <!-- Aba de Dados Pessoais -->
+                <div class="tab_content active" id="personal_tab">
+                    <form id="personal_form">
+                        <div class="dados_avatar_container">
+                            <div class="dados_avatar">
+                                <img src="../assets/icons/user-avatar.png" alt="" id="user_avatar">
+                            </div>
+                            <button type="button" id="change_avatar_btn">Alterar foto</button>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field">
+                                <label for="edit_name">Nome Completo</label>
+                                <input type="text" id="edit_name" class="form_input" placeholder="Digite seu nome completo">
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field">
+                                <label for="edit_email">Email</label>
+                                <input type="email" id="edit_email" class="form_input" placeholder="Digite seu email">
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field half">
+                                <label for="edit_cpf">CPF</label>
+                                <input type="text" id="edit_cpf" class="form_input" placeholder="000.000.000-00">
+                            </div>
+                            <div class="form_field half">
+                                <label for="edit_phone">Telefone</label>
+                                <input type="text" id="edit_phone" class="form_input" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field half">
+                                <label for="edit_birth">Data de Nascimento</label>
+                                <input type="date" id="edit_birth" class="form_input">
+                            </div>
+                            <div class="form_field half">
+                                <label for="edit_gender">Gênero</label>
+                                <select id="edit_gender" class="form_input">
+                                    <option value="">Selecione</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="O">Outro</option>
+                                    <option value="N">Prefiro não informar</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div id="button_container">
+                            <button type="submit" id="personal_form_submit">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Aba de Endereços -->
+                <div class="tab_content" id="address_tab">
+                    <div id="address_list">
+                        <p class="empty_address" id="no_address_message">Você ainda não cadastrou nenhum endereço.</p>
+                        <!-- Os endereços serão adicionados via JavaScript -->
+                    </div>
+                    
+                    <button id="add_address_btn">Adicionar Novo Endereço</button>
+                    
+                    <div id="address_form_container" class="hidden">
+                        <h3>Novo Endereço</h3>
+                        <form id="address_form">
+                            <div class="form_row">
+                                <div class="form_field">
+                                    <label for="address_title">Título do Endereço</label>
+                                    <input type="text" id="address_title" class="form_input" placeholder="Ex: Minha Casa, Trabalho">
+                                </div>
+                            </div>
+                            
+                            <div class="form_row">
+                                <div class="form_field">
+                                    <label for="address_cep">CEP</label>
+                                    <input type="text" id="address_cep" class="form_input" placeholder="00000-000">
+                                </div>
+                            </div>
+                            
+                            <div class="form_row">
+                                <div class="form_field">
+                                    <label for="address_street">Rua</label>
+                                    <input type="text" id="address_street" class="form_input" placeholder="Rua/Avenida">
+                                </div>
+                            </div>
+                            
+                            <div class="form_row">
+                                <div class="form_field half">
+                                    <label for="address_number">Número</label>
+                                    <input type="text" id="address_number" class="form_input" placeholder="Número">
+                                </div>
+                                <div class="form_field half">
+                                    <label for="address_complement">Complemento</label>
+                                    <input type="text" id="address_complement" class="form_input" placeholder="Apto, Bloco, etc">
+                                </div>
+                            </div>
+                            
+                            <div class="form_row">
+                                <div class="form_field">
+                                    <label for="address_district">Bairro</label>
+                                    <input type="text" id="address_district" class="form_input" placeholder="Bairro">
+                                </div>
+                            </div>
+                            
+                            <div class="form_row">
+                                <div class="form_field half">
+                                    <label for="address_city">Cidade</label>
+                                    <input type="text" id="address_city" class="form_input" placeholder="Cidade">
+                                </div>
+                                <div class="form_field half">
+                                    <label for="address_state">Estado</label>
+                                    <select id="address_state" class="form_input">
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <!-- Outros estados -->
+                                        <option value="SP">São Paulo</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form_actions">
+                                <button type="button" id="cancel_address_btn">Cancelar</button>
+                                <button type="submit" id="save_address_btn">Salvar Endereço</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Aba de Segurança -->
+                <div class="tab_content" id="security_tab">
+                    <form id="security_form">
+                        <div class="form_row">
+                            <div class="form_field">
+                                <label for="current_password">Senha Atual</label>
+                                <input type="password" id="current_password" class="form_input" placeholder="Digite sua senha atual">
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field">
+                                <label for="new_password">Nova Senha</label>
+                                <input type="password" id="new_password" class="form_input" placeholder="Digite sua nova senha">
+                            </div>
+                        </div>
+                        
+                        <div class="form_row">
+                            <div class="form_field">
+                                <label for="confirm_password">Confirmar Nova Senha</label>
+                                <input type="password" id="confirm_password" class="form_input" placeholder="Confirme sua nova senha">
+                            </div>
+                        </div>
+                        
+                        <div id="password_requirements">
+                            <h4>Sua senha deve conter:</h4>
+                            <ul>
+                                <li id="req_length">Pelo menos 8 caracteres</li>
+                                <li id="req_uppercase">Pelo menos uma letra maiúscula</li>
+                                <li id="req_number">Pelo menos um número</li>
+                                <li id="req_special">Pelo menos um caractere especial</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="button_container">
+                            <button type="submit" id="security_form_submit">Atualizar Senha</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <ul id="rodape_medias">
+                <li><img src="../../Home/assets/icons/whatsapp.png" alt="WhatsApp"></li>
+                <li><img src="../../Home/assets/icons/instagram.png" alt="Instagram"></li>
+                <li><img src="../../Home/assets/icons/social-media.png" alt="Social Media"></li>
+            </ul>
+
+            <span>Contato: contato@gmail.com</span>
+        </footer>
+    </div>
+
+    <script src="../js/dados.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "nome": "joão",
+      "email": "joao@email.com",
+      "senha": "123456",
+      "isAdmin": true,
+      "id": "5645"
+    },
+    {
+      "nome": "rian",
+      "email": "rian_splect@email.com",
+      "senha": "123456",
+      "isAdmin": false,
+      "id": "577c"
+    },
+    {
+      "id": "223a",
+      "nome": "Matheus Victor Silva Costa",
+      "email": "matheus@gmail.com",
+      "password": "123456",
+      "isAdmin": false
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Camiseta Básica",
+      "preco": 49.9,
+      "imagem": "camiseta.jpg",
+      "categoria": "camisetas"
+    }
+  ]
+}

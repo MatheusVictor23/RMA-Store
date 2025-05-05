@@ -1,0 +1,130 @@
+#body_content{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#perfil_content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#page_title{
+    margin: 20px 0;
+    text-align: center;
+}
+
+#perfil_card{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #aaaaaa;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #aaaaaa;
+}
+
+#perfil_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.perfil_avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+
+
+#perfil_details {
+    text-align: center;
+}
+
+#perfil_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil_form_field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.form_input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+}
+
+#button_container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#perfil_form_submit{
+    width: 60%;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#perfil_form_submit:hover {
+    background-color: #333;
+}
+
+@media(min-width:600px){
+    #perfil_card{
+        width: 80%;
+    }
+    
+    #perfil_info {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media(min-width:1024px){
+    #perfil_card{
+        width: 50%;
+    }
+    
+    #perfil_form {
+        width: 70%;
+    }
+    
+    #perfil_form_submit {
+        width: 40%;
+        height: 50px;
+    }
+}
