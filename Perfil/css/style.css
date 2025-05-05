@@ -150,6 +150,10 @@ body{
     color: #F44336;
 }
 
+a{
+    color: #fff;
+}
+
 @media(min-width:768px) {
     .profile_menu_item {
         padding: 20px;

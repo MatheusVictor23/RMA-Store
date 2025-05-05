@@ -1,8 +1,8 @@
 document.querySelector("#login_card_form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const email = document.querySelector("#email").value.trim();
-    const password = document.querySelector("#password").value.trim();
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
 
     if (!email || !password) {
         alert("Preencha todos os campos.");
