@@ -16,35 +16,48 @@
 <body>
   <div id="body_content">
     <header>
-      <nav id="nav_bar">
-        <h1 id="nav_bar_store_title">Store</h1>
+      <nav id="nav_bar" aria-label="Barra de navegação principal">
+        <h1 id="nav_bar_store_title" onclick="location.href = '../Home/index.html'" aria-label="Voltar à página inicial da loja">Store</h1>
         <ul id="nav_bar_user_options">
-          <li class="user_icon"><a href="#"><img src="./assets/icons/user.png" alt=""></a></li>
-          <li class="user_icon"><a href="#"><img src="./assets/icons/heart.png" alt=""></a></li>
-          <li class="user_icon"><a href="#"><img src="./assets/icons/shopping-cart.png" alt=""></a></li>
+          <li class="user_icon">
+            <a href="../Perfil/index.html" aria-label="Ir para o perfil do usuário">
+              <img src="./assets/icons/user.png" alt="Ícone do usuário">
+            </a>
+          </li>
+          <li class="user_icon">
+            <a href="#" aria-label="Ver lista de desejos">
+              <img src="./assets/icons/heart.png" alt="Ícone de coração - lista de desejos">
+            </a>
+          </li>
+          <li class="user_icon">
+            <a href="../Carrinho/index.html" aria-label="Ir para o carrinho de compras">
+              <img src="./assets/icons/shopping-cart.png" alt="Ícone do carrinho de compras">
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="confirmacao">
-        <h2 aria-label="Compra confirmada">Compra Confirmada!</h2>
+      <section class="confirmacao" aria-label="Seção de confirmação de compra">
+        <h2 aria-label="Compra confirmada com sucesso">Compra Confirmada!</h2>
         <p class="mensagemConfirmacao">Obrigado por comprar com a gente.</p>
-        <p class="mensagemConfirmacao" aria-label="Pedido confirmado">Seu pedido foi processado e em breve você receberá um e-mail com os detalhes da
-          entrega.</p>
-        <a href="../Home/index.html" class="continuarComprandoBtn" aria-label="Botão voltar para página inicial">Voltar</a>
+        <p class="mensagemConfirmacao" aria-label="Mensagem de confirmação do pedido">
+          Seu pedido foi processado e em breve você receberá um e-mail com os detalhes da entrega.
+        </p>
+        <a href="../Home/index.html" class="continuarComprandoBtn" aria-label="Voltar para a página inicial">Voltar</a>
       </section>
     </main>
 
     <footer class="rodape" aria-label="Rodapé da página">
       <ul id="rodape_medias">
-          <li><img src="./assets/icons/whatsapp.png" alt="Ícone whatsapp da empresa"></li>
-          <li><img src="./assets/icons/instagram.png" alt="Ícone instagram da empresa"></li>
-          <li><img src="./assets/icons/social-media.png" alt="Ícone rede social X da empresa"></li>
+        <li><img src="./assets/icons/whatsapp.png" alt="Ícone do WhatsApp da empresa" aria-label="WhatsApp da empresa"></li>
+        <li><img src="./assets/icons/instagram.png" alt="Ícone do Instagram da empresa" aria-label="Instagram da empresa"></li>
+        <li><img src="./assets/icons/social-media.png" alt="Ícone de outra rede social da empresa" aria-label="Rede social adicional da empresa"></li>
       </ul>
 
       <span>Contato: contato@gmail.com</span>
-  </footer>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>

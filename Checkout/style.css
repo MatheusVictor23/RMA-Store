@@ -1,176 +1,200 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter";
-  }
-  
-  
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  #body_content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#body_content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+main h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.colunaItens {
+  flex: 2;
+}
+
+.resumoCarrinho {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.resumoLinha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+
+#nav_bar {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #000;
+  color: #fff;
+  padding: 0 20px; 
+}
+
+#nav_bar_store_title {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#nav_bar_user_options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 3px; 
+}
+
+.user_icon {
+  margin-right: 1.25rem;
+}
+
+.user_icon:hover {
+  cursor: pointer;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+}
+
+form h3 {
+  margin-bottom: 10px;
+}
+
+.formEndereco, .formPagamento {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 15px 0 10px 0;
+}
+
+
+.finalizarBtn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.finalizarBtn:hover {
+  background-color: #fff;
+  color: #000;;
+}
+
+
+.rodape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #bfbfbf;
+  color: #fdfdfd;
+  padding: 10px;
+  text-transform: lowercase;
+}
+
+#rodape_medias {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+}
+
+
+@media (min-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  main {
-    padding: 20px;
-    flex: 1;
-  }
-  
-  main h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .colunaItens {
-    flex: 2;
-  }
-  
-  .resumoCarrinho {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-  }
-  
-  .resumoLinha {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .total {
-    font-weight: bold;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-  
- 
-  #nav_bar {
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-    background-color: #000;
-    color: #fff;
-    padding: 0 200px; 
-  }
-  
-  #nav_bar_store_title {
-    font-size: 1.5rem;
-  }
-  
-  #nav_bar_user_options {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 3px; 
-  }
-  
-  .user_icon {
-    margin-right: 1.25rem;
-  }
-  
-  .user_icon:hover {
-    cursor: pointer;
-  }
-  
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  form input, form select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  form h3 {
-    margin-bottom: 10px;
-  }
-  
-  .formEndereco, .formPagamento {
-    margin-bottom: 20px;
-  }
-  
-  h3 {
-    margin: 15px 0 10px 0;
-  }
-  
-  
-  .finalizarBtn {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-  }
-  
-  .finalizarBtn:hover {
-    background-color: #333;
-  }
-  
- 
-  .rodape {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #bfbfbf;
-    color: #fdfdfd;
-    padding: 10px;
-    text-transform: lowercase;
-  }
-  
-  #rodape_medias {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    list-style: none;
-  }
-  
-  
-  @media (min-width: 768px) {
-    .container {
       flex-direction: row;
-    }
   }
   
-  @media (min-width: 600px) {
-    .rodape {
+  #nav_bar {
+      padding: 0 80px;
+  }
+}
+
+@media (min-width: 600px) {
+  .rodape {
       padding: 20px;
       justify-content: space-between;
-    }
   }
   
-  @media (min-width: 1024px) {
-    #nav_bar {
-      height: 10vh;
-    }
+  #nav_bar {
+      padding: 0 40px;
   }
+}
+
+@media (min-width: 1024px) {
+  #nav_bar {
+      height: 10vh;
+      padding: 0 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #nav_bar {
+      padding: 0 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  form input, form select {
+      width: 100%;
+  }
+}

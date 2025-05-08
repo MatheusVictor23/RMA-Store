@@ -101,6 +101,7 @@
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    flex-direction: column;
 }
 
 .colunaItens {
@@ -124,8 +125,6 @@ main h2 {
     align-self: flex-start;
 }
 
-
-
 .itensCarrinho {
     display: flex;
     justify-content: space-between;
@@ -140,7 +139,8 @@ main h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px; /* ajuste conforme necessário */
+    gap: 40px;
+    /* ajuste conforme necessário */
 }
 
 .nomeProduto {
@@ -149,13 +149,16 @@ main h2 {
     text-decoration: none;
     color: inherit;
 }
+
 .nomeProduto {
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
     color: inherit;
-    display: inline-block; /* mantém o controle de largura */
-    width: 100px;           /* ou outro valor para alinhar certinho */
+    display: inline-block;
+    /* mantém o controle de largura */
+    width: 100px;
+    /* ou outro valor para alinhar certinho */
 }
 
 .precoProduto {
@@ -165,20 +168,18 @@ main h2 {
 
 .removerItem {
     color: #000;
-    border: none;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
     padding: 8px 12px;
     cursor: pointer;
 }
-
 
 .resumoCarrinho {
     flex: 1;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px;
-
 }
-
 
 .resumoCarrinho h3 {
     margin-bottom: 16px;
@@ -198,16 +199,16 @@ main h2 {
 }
 
 .finalizarBtn {
+    transition: all 0.3s ease;
     background-color: #000;
     color: #fff;
-    border: none;
+    border: 1px solid;
+    border-radius: 8px;
     padding: 10px 16px;
     cursor: pointer;
     width: 100%;
     margin-top: 12px;
 }
-
-
 
 /* GARANTIR QUE O FOOTER FIQUE EMBAIXO SEMPRE */
 html,
@@ -226,46 +227,43 @@ main {
     flex: 1;
 }
 
-
 .imagemProduto {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .dadosProduto {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
-
-
 
 .frete {
     display: flex;
     gap: 8px;
     margin-left: auto;
-  }
-  
-  .inputCEP {
+}
+
+.inputCEP {
     padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
     width: 100px;
-  }
-  
-  .calcularFreteBtn {
+}
+
+.calcularFreteBtn {
     padding: 6px 12px;
     background-color: #000;
     color: white;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid;
+    border-radius: 8px;
     cursor: pointer;
-  }
+    transition: all 0.2s ease;
+}
 
-
-  .continuarComprandoBtn {
+.continuarComprandoBtn {
     display: inline-block;
     margin-top: 10px;
     align-self: flex-end;
@@ -274,23 +272,92 @@ main {
     color: #fff;
     font-size: 14px;
     padding: 6px 12px;
-    border: 1px solid #000;
-    border-radius: 4px;
+    border: 1px solid;
+    border-radius: 8px;
     transition: all 0.2s ease;
-  }
-  
-  .continuarComprandoBtn:hover {
+}
+
+.continuarComprandoBtn:hover {
     background-color: #fff;
     color: #000;
-  }
+}
 
+.finalizarBtn:hover {
+    background-color: #fff;
+    color: #000;
+}
 
-  .mensagemCarrinhoVazio {
+.removerItem:hover {
+    background-color: #e0e0e0;
+}
+
+.calcularFreteBtn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.mensagemCarrinhoVazio {
     text-align: center;
     margin-top: 50px;
-  }
-  
-  .mensagemCarrinhoVazio p {
+}
+
+.mensagemCarrinhoVazio p {
     font-size: 18px;
     margin-bottom: 10px;
-  }
+}
+
+/* RESPONSIVO */
+@media (min-width: 480px) {
+    #nav_bar {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    #nav_bar {
+        padding: 0 80px;
+    }
+    
+    .container {
+        flex-direction: row;
+    }
+    
+    .itensCarrinho {
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    #nav_bar {
+        padding: 0 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #nav_bar {
+        padding: 0 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .infoProduto {
+        gap: 20px;
+    }
+    
+    .frete {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    
+    .itensCarrinho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .removerItem {
+        margin-top: 10px;
+    }
+}

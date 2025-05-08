@@ -60,28 +60,28 @@
             <h2>Meu Carrinho</h2>
             <div class="container">
                 <div class="colunaItens">
-                    <div class="itensCarrinho">
-                        <img src="./assets/imgs/brinco.jpg" alt="Brinco" class="imagemProduto">
+                    <div class="itensCarrinho" aria-label="Produto no carrinho: Camiseta cinza">
+                        <img src="./assets/imgs/imgs/camisa01.png" alt="Imagem de uma camiseta" class="imagemProduto">
                         <div class="infoProduto">
-                            <a href="pagina-produto.html" class="nomeProduto">Brinco</a>
-                            <span class="precoProduto">R$ 29,90</span>
+                            <a href="pagina-produto.html" class="nomeProduto">Camiseta Lacoste</a>
+                            <span class="precoProduto">R$ 175,99</span>
                         </div>
-                        <button class="removerItem"><i class="fas fa-trash"></i></button>
+                        <button class="removerItem" aria-label="Remover brinco do carrinho" title="Remover"><i class="fas fa-trash"></i></button>
                     </div>
 
-                    <div class="itensCarrinho">
-                        <img src="./assets/imgs/colar.png" alt="Brinco" class="imagemProduto">
+                    <div class="itensCarrinho" aria-label="Produto no carrinho: Camiseta roxa">
+                        <img src="./assets/imgs/imgs/camisa02.jpg" alt="Imagem de uma camiseta" class="imagemProduto">
                         <div class="infoProduto">
-                            <a href="pagina-produto.html" class="nomeProduto">Colar</a>
-                            <span class="precoProduto">R$ 39,90</span>
+                            <a href="pagina-produto.html" class="nomeProduto">Camiseta Lacoste</a>
+                            <span class="precoProduto">R$ 179,99</span>
                         </div>
-                        <button class="removerItem"><i class="fas fa-trash"></i></button>
+                        <button class="removerItem" aria-label="Remover colar do carrinho" title="Remover"><i class="fas fa-trash"></i></button>
                     </div>
-                    <a href="../Home/index.html" class="continuarComprandoBtn">Continuar comprando</a>
 
+                    <a href="../Home/index.html" class="continuarComprandoBtn" aria-label="Voltar para a loja e continuar comprando">Continuar comprando</a>
                 </div>
 
-                <div class="resumoCarrinho">
+                <div class="resumoCarrinho" aria-label="Resumo do carrinho">
                     <div class="resumoLinha">
                         <span id="Subtotal">Subtotal</span>
                         <span id="total">R$ 50,00</span>
@@ -89,26 +89,27 @@
                     <div class="resumoLinha">
                         <span>Entrega</span>
                         <div class="frete">
-                            <input type="text" class="inputCEP" placeholder="CEP">
-                            <button class="calcularFreteBtn">Calcular</button>
+                            <label for="cep" class="sr-only">Digite seu CEP</label>
+                            <input type="text" id="cep" class="inputCEP" placeholder="CEP" aria-describedby="descricaoCEP">
+                            <span id="descricaoCEP" class="sr-only">Digite seu CEP para calcular o frete</span>
+                            <button class="calcularFreteBtn" aria-label="Calcular frete">Calcular</button>
                         </div>
                     </div>
                     <div class="resumoLinha total">
                         <span>Total</span>
                         <span>R$ 50,00</span>
                     </div>
-                    <button class="finalizarBtn" onclick="location.href='../Checkout/index.html'">Finalizar Compra</button>
+                    <button class="finalizarBtn" onclick="location.href='../Checkout/index.html'" aria-label="Ir para a finalização da compra">Finalizar Compra</button>
                 </div>
             </div>
         </main>
 
         <footer class="rodape" aria-label="Rodapé da página">
             <ul id="rodape_medias">
-                <li><img src="./assets/icons/whatsapp.png" alt="Ícone whatsapp da empresa"></li>
-                <li><img src="./assets/icons/instagram.png" alt="Ícone instagram da empresa"></li>
-                <li><img src="./assets/icons/social-media.png" alt="Ícone rede social X da empresa"></li>
+                <li><img src="./assets/icons/whatsapp.png" alt="Ícone do WhatsApp da empresa" aria-label="WhatsApp da empresa"></li>
+                <li><img src="./assets/icons/instagram.png" alt="Ícone do Instagram da empresa" aria-label="Instagram da empresa"></li>
+                <li><img src="./assets/icons/social-media.png" alt="Ícone de rede social X da empresa" aria-label="Outra rede social da empresa"></li>
             </ul>
-
             <span>Contato: contato@gmail.com</span>
         </footer>
     </div>
