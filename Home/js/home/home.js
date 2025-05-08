@@ -58,3 +58,7 @@ const next = document.querySelector("#categories_next");
 next.addEventListener('click', carousel.next);
 
 carousel.imgs(page);
+
+document.getElementById('hero_section_description_button').addEventListener('click', function() {
+    window.location.href = '#categories';
+  });

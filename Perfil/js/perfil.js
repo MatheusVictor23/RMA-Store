@@ -17,14 +17,14 @@ async function loadUserData() {
         const userData = await response.json();
         
         // Preencher os dados na página
-        document.getElementById('user_name').textContent = userData.nome || 'Usuário';
-        document.getElementById('user_email').textContent = userData.email || 'email@exemplo.com';
+        document.getElementById('user_name').textContent = userData.nome || 'Linus Torvalds';
+        document.getElementById('user_email').textContent = userData.email || 'linux@microsoft.com';
         
     } catch (error) {
         console.error('Erro:', error);
         // Exibir dados de fallback em caso de erro
-        document.getElementById('user_name').textContent = 'Usuário';
-        document.getElementById('user_email').textContent = 'email@exemplo.com';
+        document.getElementById('user_name').textContent = 'Linus Torvalds';
+        document.getElementById('user_email').textContent = 'linux@microsoft.com';
     }
 }
 
