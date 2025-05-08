@@ -15,12 +15,24 @@
 <body>
   <div id="body_content">
     <header>
-      <nav id="nav_bar">
-        <h1 id="nav_bar_store_title">Store</h1>
+      <nav id="nav_bar" aria-label="Barra de navegação principal">
+        <h1 id="nav_bar_store_title" onclick="location.href = '../Home/index.html'" aria-label="Voltar à página inicial da loja">Store</h1>
         <ul id="nav_bar_user_options">
-          <li class="user_icon"><a href="#"><img src="./assets/icons/user.png" alt=""></a></li>
-          <li class="user_icon"><a href="#"><img src="./assets/icons/heart.png" alt=""></a></li>
-          <li class="user_icon"><a href="#"><img src="./assets/icons/shopping-cart.png" alt=""></a></li>
+          <li class="user_icon">
+            <a href="../Perfil/index.html" aria-label="Ir para o perfil do usuário">
+              <img src="./assets/icons/user.png" alt="Ícone do usuário">
+            </a>
+          </li>
+          <li class="user_icon">
+            <a href="#" aria-label="Ver lista de desejos">
+              <img src="./assets/icons/heart.png" alt="Ícone de coração - lista de desejos">
+            </a>
+          </li>
+          <li class="user_icon">
+            <a href="../Carrinho/index.html" aria-label="Ir para o carrinho de compras">
+              <img src="./assets/icons/shopping-cart.png" alt="Ícone do carrinho de compras">
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -30,34 +42,35 @@
       <div class="container">
         <div class="colunaItens">
           <h3>Endereço de Entrega</h3>
-          <form class="formEndereco">
-            <input type="text" placeholder="Nome completo" required />
-            <input type="text" placeholder="Endereço" required />
-            <input type="text" placeholder="Cidade" required />
-            <input type="text" placeholder="Estado" required />
-            <input type="text" placeholder="CEP" required />
-            <input type="text" placeholder="Telefone" required />
+          <form class="formEndereco" aria-label="Formulário de endereço de entrega">
+            <input type="text" placeholder="Nome completo" required aria-label="Nome completo" />
+            <input type="text" placeholder="Endereço" required aria-label="Endereço" />
+            <input type="text" placeholder="Cidade" required aria-label="Cidade" />
+            <input type="text" placeholder="Estado" required aria-label="Estado" />
+            <input type="text" placeholder="CEP" required aria-label="CEP" />
+            <input type="text" placeholder="Telefone" required aria-label="Telefone" />
           </form>
 
           <h3>Forma de Pagamento</h3>
-          <form class="formPagamento">
-            <select required>
+          <form class="formPagamento" aria-label="Formulário de forma de pagamento">
+            <select required aria-label="Selecionar forma de pagamento">
               <option value="">Selecione</option>
               <option value="pix">PIX</option>
               <option value="cartao">Cartão de Crédito</option>
             </select>
 
-            <input type="text" placeholder="Número do cartão" />
-            <input type="text" placeholder="Nome no cartão" />
-            <input type="text" placeholder="Validade (MM/AA)" />
-            <input type="text" placeholder="CVV" />
+            <input type="text" placeholder="Número do cartão" aria-label="Número do cartão" />
+            <input type="text" placeholder="Nome no cartão" aria-label="Nome no cartão" />
+            <input type="text" placeholder="Validade (MM/AA)" aria-label="Validade do cartão" />
+            <input type="text" placeholder="CVV" aria-label="Código de segurança (CVV)" />
           </form>
 
-          <button class="finalizarBtn" onclick="location.href = '../Confirmacao/index.html'"> Confirmar Pedido </button>
-
+          <button class="finalizarBtn" onclick="location.href = '../Confirmacao/index.html'" aria-label="Confirmar pedido e finalizar compra">
+            Confirmar Pedido
+          </button>
         </div>
 
-        <div class="resumoCarrinho">
+        <div class="resumoCarrinho" aria-label="Resumo do pedido">
           <h3>Resumo do Pedido</h3>
           <div class="resumoLinha">
             <span>Subtotal</span>
@@ -77,13 +90,13 @@
 
     <footer class="rodape" aria-label="Rodapé da página">
       <ul id="rodape_medias">
-          <li><img src="./assets/icons/whatsapp.png" alt="Ícone whatsapp da empresa"></li>
-          <li><img src="./assets/icons/instagram.png" alt="Ícone instagram da empresa"></li>
-          <li><img src="./assets/icons/social-media.png" alt="Ícone rede social X da empresa"></li>
+        <li><img src="./assets/icons/whatsapp.png" alt="Ícone do WhatsApp da empresa" aria-label="WhatsApp da empresa"></li>
+        <li><img src="./assets/icons/instagram.png" alt="Ícone do Instagram da empresa" aria-label="Instagram da empresa"></li>
+        <li><img src="./assets/icons/social-media.png" alt="Ícone de outra rede social da empresa" aria-label="Rede social adicional da empresa"></li>
       </ul>
 
       <span>Contato: contato@gmail.com</span>
-  </footer>
+    </footer>
   </div>
   <script src="script.JS"></script>
 </body>
