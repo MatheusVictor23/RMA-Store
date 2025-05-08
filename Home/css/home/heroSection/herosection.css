@@ -41,21 +41,16 @@
     border-radius: 0.938rem;
     padding: 15px;
     background-color: #000;
-    color: #fff;
+    color: #ffffff;
     font-size: larger;
-}
-
-#hero_section_description_button a {
-    text-decoration: none;
-    color: #fff;
-    font-family: "Montserrat";
-    font-size: 1.25rem;
 }
 
 #hero_section_description_button:hover{
     cursor: pointer;
     scale: 1.05;
     transition: all 0.3s ease-in-out;
+    background-color: white;
+    color: black;
 }
 
 @media(min-width:600px){
